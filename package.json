@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "json-rpc2": "^2.0.0"
+  }
+}
