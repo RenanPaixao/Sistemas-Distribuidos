@@ -76,8 +76,28 @@ function pow(args, opt, callback) {
 	callback(error, result);
 }
 function sqrt(args, opt, callback) {
-	const error = checkArgs(args)
+	const error = checkArgs(args, { max: 1})
 	const result = error ? null : Math.sqrt(args[0])
+	callback(error, result);
+}
+function log(args, opt, callback) {
+	const error = checkArgs(args, { max: 1})
+	const result = error ? null : Math.log(args[0])
+	callback(error, result);
+}
+function log10(args, opt, callback) {
+	const error = checkArgs(args, { max: 1})
+	const result = error ? null : Math.log10(args[0])
+	callback(error, result);
+}
+function sin(args, opt, callback) {
+	const error = checkArgs(args, { max: 1})
+	const result = error ? null : Math.sin(args[0])
+	callback(error, result);
+}
+function cos(args, opt, callback) {
+	const error = checkArgs(args, { max: 1})
+	const result = error ? null : Math.cos(args[0])
 	callback(error, result);
 }
 
@@ -87,6 +107,10 @@ server.expose('multiply', multiply);
 server.expose('divide', divide);
 server.expose('pow', pow);
 server.expose('sqrt', sqrt);
+server.expose('log', log);
+server.expose('log10', log10);
+server.expose('sin', sin);
+server.expose('cos', cos);
 
 console.log('Servidor RPC iniciado em http://localhost:8000');
 server.listen(8000, 'localhost');
