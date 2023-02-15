@@ -51,22 +51,22 @@ consumer.on('ready', () => {
 });
 
 function add(args) {
-  const result = error ? undefined : args.reduce((a, b) => a + b, 0)
+  const result = args.reduce((a, b) => a + b, 0)
   
   console.log(result)
 }
 function sub(args) {
-  const result = error ? undefined : args.reduce((a, b) => a - b, 0)
+  const result = args.reduce((a, b) => a - b, 0)
   
   console.log(result)
 }
 function multiply(args) {
-  const result = error ? undefined : args.reduce((a, b) => a * b, 1)
+  const result = args.reduce((a, b) => a * b, 1)
   
   console.log(result)
 }
 function divide(args) {
-  const result = error ? undefined : args.reduce((a, b) => a / b, 1)
+  const result = args.reduce((a, b) => a / b, 1)
   
   console.log(result)
 }
